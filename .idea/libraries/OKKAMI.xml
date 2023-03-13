@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="OKKAMI">
+    <ANNOTATIONS>
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI" />
+    </ANNOTATIONS>
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/android/app/src/main/java" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/android/okkami-android-sdk/sdk-and-demo/app/src/main/gen" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/android/okkami-android-sdk/sdk-and-demo/app/src/main/java" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/android/okkami-android-sdk/sdk-and-demo/okkami-sdk/src/main/gen" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/android/okkami-android-sdk/sdk-and-demo/okkami-sdk/src/main/java" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/android/src/main/gen" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/android/src/main/java" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/example/OkkamiSdkTest/android/app/src/main/gen" />
+      <root url="file://$USER_HOME$/Documents/iOS/OKKAMI/okkami-sdk/example/OkkamiSdkTest/android/app/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

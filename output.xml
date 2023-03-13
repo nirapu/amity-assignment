@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.0 on darwin)" generated="20230313 22:58:08.401" rpa="false" schemaversion="3">
+<suite id="s1" name="Assignment" source="/Users/michaelabadi/Downloads/Pu/Assignment">
+<suite id="s1-s1" name="Testcase" source="/Users/michaelabadi/Downloads/Pu/Assignment/testcase.robot">
+<test id="s1-s1-t1" name="Test_Case01 Verify User Can Search with Partial Text" line="8">
+<kw name="Open Web And Login" library="keyword">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230313 22:58:08.700" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230313 22:58:08.699" endtime="20230313 22:58:16.072"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230313 22:58:16.073" endtime="20230313 22:58:16.547"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Logo_Orangehrm}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:16.548" endtime="20230313 22:58:17.010"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_username}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:17.011" level="INFO">Typing text 'Admin' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:17.010" endtime="20230313 22:58:17.123"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_password}</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:17.124" level="INFO">Typing text 'admin123' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:17.123" endtime="20230313 22:58:17.235"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:17.236" level="INFO">Clicking button '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20230313 22:58:17.235" endtime="20230313 22:58:18.547"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:08.699" endtime="20230313 22:58:18.548"/>
+</kw>
+<kw name="Go To PIM Menu" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${menu_pim}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:18.548" endtime="20230313 22:58:18.993"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${menu_pim}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:18.994" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20230313 22:58:18.993" endtime="20230313 22:58:20.552"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_emp_info}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:20.553" endtime="20230313 22:58:21.002"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:18.548" endtime="20230313 22:58:21.002"/>
+</kw>
+<kw name="Verify List Of Predicted Users That Has ch" library="keyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_emp_name}</arg>
+<arg>ch</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:21.004" level="INFO">Typing text 'ch' into text field '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:21.003" endtime="20230313 22:58:21.160"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${list_box_emp_name}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:21.160" endtime="20230313 22:58:21.188"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${list_box_emp_name}</arg>
+<arg>ch</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230313 22:58:21.209" level="INFO">Element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div[2]' contains text 'ch'.</msg>
+<status status="PASS" starttime="20230313 22:58:21.188" endtime="20230313 22:58:21.209"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>testcase01_verify01.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230313 22:58:21.875" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testcase01_verify01.png"&gt;&lt;img src="testcase01_verify01.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230313 22:58:21.210" endtime="20230313 22:58:21.875"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:21.002" endtime="20230313 22:58:21.875"/>
+</kw>
+<kw name="Verify Results Of Records" library="keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:21.876" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230313 22:58:21.876" endtime="20230313 22:58:21.965"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_record_found}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:21.965" endtime="20230313 22:58:22.632"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>testcase01_verify02.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230313 22:58:23.123" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testcase01_verify02.png"&gt;&lt;img src="testcase01_verify02.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230313 22:58:22.633" endtime="20230313 22:58:23.123"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:21.875" endtime="20230313 22:58:23.123"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230313 22:58:23.124" endtime="20230313 22:58:23.229"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:08.698" endtime="20230313 22:58:23.229"/>
+</test>
+<test id="s1-s1-t2" name="Test_Case02 Verify User Can Add Pay Grades" line="14">
+<kw name="Open Web And Login" library="keyword">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230313 22:58:23.232" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230313 22:58:23.231" endtime="20230313 22:58:31.946"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230313 22:58:31.946" endtime="20230313 22:58:32.422"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Logo_Orangehrm}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:32.423" endtime="20230313 22:58:33.203"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_username}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:33.204" level="INFO">Typing text 'Admin' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:33.204" endtime="20230313 22:58:33.330"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_password}</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:33.331" level="INFO">Typing text 'admin123' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:33.331" endtime="20230313 22:58:33.429"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:33.429" level="INFO">Clicking button '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20230313 22:58:33.429" endtime="20230313 22:58:34.706"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:23.231" endtime="20230313 22:58:34.707"/>
+</kw>
+<kw name="Go To Admin Menu" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${menu_admin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:34.707" endtime="20230313 22:58:35.230"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${menu_admin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:35.231" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20230313 22:58:35.231" endtime="20230313 22:58:36.897"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_system_admin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:36.898" endtime="20230313 22:58:37.428"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:34.707" endtime="20230313 22:58:37.429"/>
+</kw>
+<kw name="Go to Pay Grade Page" library="keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_dropdown_job}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:37.431" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]/span/i'.</msg>
+<status status="PASS" starttime="20230313 22:58:37.430" endtime="20230313 22:58:37.498"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sub_menu_pay_grades}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:37.499" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20230313 22:58:37.499" endtime="20230313 22:58:38.118"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:37.429" endtime="20230313 22:58:38.119"/>
+</kw>
+<kw name="Add Name In Pay Grades Page" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_add_PayGardesPage}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:38.120" endtime="20230313 22:58:38.798"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_add_PayGardesPage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:38.799" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div[1]/div/button'.</msg>
+<status status="PASS" starttime="20230313 22:58:38.798" endtime="20230313 22:58:39.404"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_fill_name}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:39.405" endtime="20230313 22:58:40.482"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_name}</arg>
+<arg>Indian Rupee</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:40.482" level="INFO">Typing text 'Indian Rupee' into text field '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:40.482" endtime="20230313 22:58:40.616"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_save_AddPayGradesPage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:40.617" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230313 22:58:40.617" endtime="20230313 22:58:40.665"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:38.119" endtime="20230313 22:58:40.665"/>
+</kw>
+<kw name="Add Currency For Indian Rupee Grade" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_add_CurrenciesSection}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:40.666" endtime="20230313 22:58:41.918"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_add_CurrenciesSection}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:41.919" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/div/div[1]/div/button'.</msg>
+<status status="PASS" starttime="20230313 22:58:41.918" endtime="20230313 22:58:41.970"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_dropdown_currency}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:41.970" endtime="20230313 22:58:42.629"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_dropdown_currency}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:42.630" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/form/div[1]/div/div/div/div[2]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20230313 22:58:42.629" endtime="20230313 22:58:42.690"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${menu_currency_INR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230313 22:58:42.690" endtime="20230313 22:58:42.984"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${menu_currency_INR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:42.985" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/form/div[1]/div/div/div/div[2]/div/div[2]/div[59]/span'.</msg>
+<status status="PASS" starttime="20230313 22:58:42.985" endtime="20230313 22:58:43.033"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_minimum_salary}</arg>
+<arg>30000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:43.034" level="INFO">Typing text '30000' into text field '//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/form/div[2]/div/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:43.033" endtime="20230313 22:58:43.164"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_fill_maximum_salary}</arg>
+<arg>100000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:43.165" level="INFO">Typing text '100000' into text field '//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/form/div[2]/div/div[2]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230313 22:58:43.164" endtime="20230313 22:58:43.254"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_save_AddCurrency}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:43.255" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/form/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20230313 22:58:43.254" endtime="20230313 22:58:43.300"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:40.665" endtime="20230313 22:58:43.300"/>
+</kw>
+<kw name="Verify Added Records In The Currencies Section" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${record_currency_01}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:43.301" endtime="20230313 22:58:47.137"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${record_currency_name}</arg>
+<arg>Indian Rupee</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230313 22:58:47.138" level="INFO">Verifying element '//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div/div[2]/div' contains exact text 'Indian Rupee'.</msg>
+<status status="PASS" starttime="20230313 22:58:47.137" endtime="20230313 22:58:47.160"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>testcase02_verify01.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230313 22:58:47.646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testcase02_verify01.png"&gt;&lt;img src="testcase02_verify01.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230313 22:58:47.161" endtime="20230313 22:58:47.647"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:43.301" endtime="20230313 22:58:47.647"/>
+</kw>
+<kw name="Clear currency Indian Rupee" library="keyword" type="TEARDOWN">
+<kw name="Go to Pay Grade Page" library="keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_dropdown_job}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:47.649" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]/span/i'.</msg>
+<status status="PASS" starttime="20230313 22:58:47.648" endtime="20230313 22:58:47.681"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sub_menu_pay_grades}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:47.682" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20230313 22:58:47.681" endtime="20230313 22:58:48.208"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:47.647" endtime="20230313 22:58:48.208"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${chk_box_INR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:48.208" endtime="20230313 22:58:49.317"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${chk_box_INR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:49.318" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div[3]/div/div[2]/div[6]/div/div[1]/div/div/label/span'.</msg>
+<status status="PASS" starttime="20230313 22:58:49.318" endtime="20230313 22:58:49.358"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_delete_selected}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:49.359" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div[2]/div/div/button'.</msg>
+<status status="PASS" starttime="20230313 22:58:49.358" endtime="20230313 22:58:49.408"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_yes_delete}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230313 22:58:49.409" endtime="20230313 22:58:49.433"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_yes_delete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230313 22:58:49.433" level="INFO">Clicking element '//*[@id="app"]/div[3]/div/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20230313 22:58:49.433" endtime="20230313 22:58:49.475"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:47.647" endtime="20230313 22:58:49.475"/>
+</kw>
+<status status="PASS" starttime="20230313 22:58:23.230" endtime="20230313 22:58:49.475"/>
+</test>
+<status status="PASS" starttime="20230313 22:58:08.431" endtime="20230313 22:58:49.477"/>
+</suite>
+<status status="PASS" starttime="20230313 22:58:08.403" endtime="20230313 22:58:49.478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Assignment">Assignment</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Testcase">Assignment.Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
